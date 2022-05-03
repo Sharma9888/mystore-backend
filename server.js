@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use("/api/v1", router);
 
-const port = process.env.port || 4000;
+const port = process.env.port;
 
 app.listen(port, () => {
   console.log(`Server is successfully running on port:${port}.`);
