@@ -3,7 +3,6 @@ import Product from "../models/product.js";
 export const createProduct = (req, res) => {
   try {
     const { title, price, description, category, image, rate, count } =req.body;
-    console.log({ title, price, description, category, image, rate, count })
     const createProductRes = new Product({
       title,
       price,
@@ -13,7 +12,6 @@ export const createProduct = (req, res) => {
       rate,
       count,
     });
-    console.log('createprod ===>', createProductRes)
     createProductRes.save();
     res.status(200).json(createProductRes);
   } catch (error) {
