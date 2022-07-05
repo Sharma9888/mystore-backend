@@ -32,7 +32,6 @@ export const createProduct = (req, res) => {
 export const getProduct = async (req, res) => {
   try {
     const userId = req.query.id;
-    console.log(userId);
     const getProductRes = await Product.findOne({ _id: userId });
     res.status(200).json(getProductRes);
   } catch (error) {
